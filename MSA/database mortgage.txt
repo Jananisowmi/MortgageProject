@@ -1,0 +1,21 @@
+ create table application_data(
+userid int ,
+name varchar(20) not null,
+loanAmount int not  null,
+propertyType varchar(30) not  null,
+propertyAmount float not  null,
+civicScore int not null,
+foreign key(userid) references user(id)
+);
+
+CREATE TABLE user (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(20) NOT NULL,
+  password varchar(20) NOT NULL,
+  name varchar(20) not null,
+  city varchar(20) not null,
+  country varchar(20) not null,
+  gmail varchar(20) not null,
+  PRIMARY KEY (id),
+  UNIQUE KEY username (username)
+) ;
